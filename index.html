@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Incentive</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="CSS/style.css">
+        
+    </head>
+    <body>
+        <form action="add.php" method="POST" onsubmit="return validateForm()" name="form">
+            <input type="text" value="Business Name" name="name">
+            <input type="text" value="Loan Amount" name="loan">
+            <select name="Loan">
+                <option value="Vechicle">Vechicle</option>
+                <option value="equipment">New piece of equipment</option>
+                <option value="property">Buy a property</option>
+                <option value="Business">Buy another Business</option>
+                <option value="Overseas">Export Overseas</option>
+                <option value="Recruit">Recruit</option>
+                <option value="Other">Other</option>
+            </select>
+            <input type="submit" Value="Submit">
+        </form>
+    </body>
+
+    <script>
+        function validateForm(){
+                var x = document.forms["form"]["name"].value;
+                if (x == "") {
+                    alert("Name must be filled out");
+                    return false;
+                }
+
+                var x = document.forms["form"]["loan"].value;
+                if (x == "") {
+                    alert("Loan amount must be filled out");
+                    return false;
+                }
+            }
+    </script>
+</html>
